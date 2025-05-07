@@ -10,88 +10,42 @@
 
 <body class="">
 
-    <div class="container-sm">
+    <div class="container border shadow-lg" id="containerPrincipal">
 
-        <form action="/pagina-processa-dados-do-form" method="post" >
+        <form action="https://formsubmit.co/mdcmatheuzinho@gmail.com" method="post" >
 
-                <fieldset>
-
-                    <legend class="text-center mt-3 mb-4">Dados Gerais</legend>
+                    <legend class="text-center mt-3 mb-4">Envie sua Mensagem!</legend>
 
                         <div class="row g-3">
 
                             <div class="col-md-6 form-floating">
-                                <input type="name" minlength="3" id="name" class="form-control shadow" placeholder="name" required>
+                                <input name="nome" type="name" minlength="3" id="name" class="form-control shadow" placeholder="name" required>
                                 <label for="floatingInput">Nome</label>
                             </div>
 
                             <div class="col-md-6 form-floating">
-                                <input type="cpf" minlength="11" id="cpf" class="form-control shadow" placeholder="cpf" required>
-                                <label for="floatingInput" class="form-label">CPF</label>
+                                <input name="email" type="email" minlength="11" id="cpf" class="form-control shadow" placeholder="email" required>
+                                <label for="floatingInput" class="form-label">Email</label>
                             </div>
 
-                            <div class="col-md-12 form-floating justify-content-center">
-                                <input type="date" id="date" class="form-control shadow" placeholder="date" required>
-                                <label for="floatingInput" class="form-label">Data de Nascimento</label>
-                            </div>
+                            <div class="col-md-12 form-floating">
+                                <textarea name="message" id="msg" class="form-control shadow" placeholder="msg" rows="3" style="height: 150px;" required></textarea>
+                                <label for="msg">Mensagem</label>
+                            </div>        
 
                         </div>
 
-                </fieldset>
-
-                <fieldset class="mt-3 mb-4">
-
-                <div class="row g-3">
-                    <div class="col-md-4 form-floating">
-                        <input type="text" id="cidade" class="form-control shadow" placeholder="cidade">
-                        <label for="cidade">Cidade</label>
+                    
+                    <div class="btn-group m-3" id="buttons">                    
+                        <button type="submit" class="btn btn-primary shadow"><span id="submit">Enviar!!</span></button>
+                        <button type="reset" class="btn btn-outline-primary shadow "><span id="clear">Limpar</span></button>
                     </div>
 
-                    <div class="col-md-5 form-floating" >
-                            <select name="Selecione" id="tipo" class="form-select w-80 shadow">
-                                <option value="">Selecione...</option>
-                                <option value="">Rua</option>
-                                <option value="">Estrada</option>
-                                <option value="">Rodovia</option>
-                                <option value="">Outros</option>
-                            </select>
-                        <label for="tipo" class="form-label">Tipo do Endereço</label>
+                    <div>
+                        <input type="hidden" name="_subject" value="Contato">
+                        <input type="text" name="_honey" style="display:none;">
+                        <input type="hidden" name="_captcha" value="false">
                     </div>
-
-                    <div class="col-md-3 form-floating">
-                        <input type="text" id="numero" class="form-control shadow" placeholder="numero" required>
-                        <label for="numero">Número</label>
-                    </div>
-
-                    <div class="col-md-12 form-floating">
-                        <input type="text" id="complemento" class="form-control shadow" placeholder="complemento" required>
-                        <label for="complemento">Complemento</label>
-                    </div>
-
-                </div>
-
-                </fieldset>
-
-                <fieldset>
-
-                    <legend class="text-center mt-3 mb-4">Fale Conosco</legend>
-
-                    <div class="mb-2 form-floating">
-                        <textarea name="" id="msg" class="form-control shadow" placeholder="msg" rows="3" style="height: 150px;" required></textarea>
-                        <label for="msg">Mensagem</label>
-                    </div>
-
-                </fieldset>
-
-                <fieldset>
-
-                    <div class="btn-group" id="buttons">                    
-                        <button type="submit" class="btn btn-outline-primary shadow"><span id="submit">Enviar Sua Mensagem</span></button>
-                        <button type="reset" class="btn btn-outline-primary shadow"><span id="clear">Limpar Formulario</span></button>
-                    </div>
-
-                </fieldset>
-
         </form>
 
     </div>
